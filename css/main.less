@@ -1,0 +1,118 @@
+﻿@min-width:600px;
+@mid-width:800px;
+
+@white:#ffffff;
+@red:#e90b02;
+@yellow:#F2F021;
+@sky-blue:#61d7f2;
+
+body
+{
+	background:@white;
+	overflow-y:hidden;
+}
+.cf:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*--------------------------------------------*/
+/*HEADER*/
+/*--------------------------------------------*/
+main
+{
+	position:fixed;
+	background:@sky-blue;
+	background-size:cover;
+	min-width:@min-width;
+	width:100vw;
+	z-index:0;
+	.container
+	{
+		position:relative;
+		height:100vh;
+		z-index:150;
+	}
+	h1
+	{
+		top:0;
+		margin:0;
+		position:absolute;
+		width:100vw;
+		font-family: "ff-good-headline-web-pro-con", sans-serif;		
+		font-size:14vw;
+		text-align:center;
+		letter-spacing: -.02em;
+		line-height:1.25em;
+		vertical-align:middle;
+		color:@red;
+		opacity:0.95;	
+		min-width:@min-width;		
+		filter: saturate(90%) brightness(120%) contrast(80%);
+		@media (max-width: @mid-width)
+		{
+			font-size:112px;
+
+			@media(orientation:portrait)
+			{
+				top:2.5vh;
+			}
+		}
+	}
+}
+#mech_wrap
+{
+	position:absolute;
+	top:0;
+	z-index:180;
+	height:100vh;
+	width:100vw;
+	min-width:@min-width;
+	filter: saturate(90%) brightness(125%) contrast(85%);
+}
+#rad_gradient	
+{
+	position:absolute;
+	top:0;
+	z-index:100;
+	height:100vh;
+	width:100vw;
+	min-width:@min-width;
+	background:  -moz-radial-gradient(ellipse at bottom, rgba(255,255,255,1) 20%,rgba(255,255,255,0) 80%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(ellipse at bottom, rgba(255,255,255,1) 20%,rgba(255,255,255,0) 80%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at bottom, rgba(255,255,255,1) 20%,rgba(255,255,255,0) 80%);
+}
+#ray_poly_controller
+{
+	position:absolute;
+	top:0;
+	display:block;
+	width: 100%;
+	min-width:@min-width;
+	height: 100vh;
+	z-index:199;
+	polygon 
+	{
+		fill:@white;
+		fill-opacity:0;
+	}
+
+}
+#ray_poly 
+{
+	position:absolute;
+	top:0;
+	display:block;
+	width: 100vw;
+	min-width:@min-width;
+	height: 100vh;
+	z-index:110;
+	polygon 
+	{
+		fill: #ffffff;
+		fill-opacity:0.4;
+	}
+}
+
